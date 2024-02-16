@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inputBox{
+  position:relative;
+  width:250px;
+  padding-top: 15px;
+}
+.inputBox input, textarea{
+  width: 100%;
+  background: transparent;
+  color: #000000;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  padding: 10px 0px 5px;
+
+
+}
+
+.inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 10px 0px 5px;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  pointer-events: none;
+  letter-spacing: 0.1em;
+  transition-duration: 0.3s;
+}
+
+.unselected{
+  color: rgba(0, 0, 0, 0.5);
+
+}
+.selected{
+  color: rgba(0, 0, 0, 1);
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span,
+.selector{
+  color: #2196f3;
+  transform: translateY(-20px);
+  font-size: 0.8em;
+}
+
+.inputBox .valid{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgba(0,0,0,0.2);
+  overflow: hidden;
+  left:0;
+  bottom:0;
+}
+.inputBox .invalid{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 0, 0, 0.433);
+  overflow: hidden;
+  left:0;
+  bottom:0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
